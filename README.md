@@ -1,6 +1,6 @@
-# Welcome to your Expo app 👋
+# SafeEats
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Allergy detection app for packaged food items.
 
 ## Get started
 
@@ -16,6 +16,8 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
     npx expo start
    ```
 
+3. Download Expo Go app and scan the QR-Code.
+
 In the output, you'll find options to open the app in a
 
 - [development build](https://docs.expo.dev/develop/development-builds/introduction/)
@@ -23,28 +25,58 @@ In the output, you'll find options to open the app in a
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
 - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Tech Stack
 
-## Get a fresh project
+- Expo - React Native development platform
+- React Navigation - Navigation library
+- Expo Router - File-based routing
+- Reanimated - Animations
+- TypeScript - Type safety
 
-When you're ready, run:
+## Project Structure
 
-```bash
-npm run reset-project
-```
+- app - Screen components and routing
+- components - Reusable UI components
+- constants - Theme colors and other constants
+- hooks - Custom React hooks for theming
+- assets - Images and fonts
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## To run the dev mode remotely on Android
 
-## Learn more
+1. Create an Expo account by visiting [Expo Sign Up](https://expo.dev/signup).
 
-To learn more about developing your project with Expo, look at the following resources:
+2. Log in to your Expo account in the terminal
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+   ```bash
+   expo login
+   ```
 
-## Join the community
+   Enter user name and the password.
 
-Join our community of developers creating universal apps.
+3. Initialize EAS
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+   ```bash
+   eas init
+   ```
+
+4. Configure the build
+
+   ```bash
+   eas build:configure
+   ```
+
+5. Start the build process
+
+   ```bash
+   eas build --profile development --platform all
+   ```
+
+6. Wait for the build to complete. It can take 8-15 minutes for completion.
+
+7. Scan the QR code and install the application
+
+8. Start the app
+
+   ```bash
+   npx expo start
+   ```
