@@ -80,3 +80,29 @@ In the output, you'll find options to open the app in a
    ```bash
    npx expo start
    ```
+
+## If you face any errors
+
+If you encounter the error `Unable to find expo in this project - have you run yarn / npm install yet?` when you run `npx expo start`, follow these steps:
+
+First, clear the npm cache and node_modules:
+
+```bash
+rm -rf node_modules
+npm cache clean --force
+npm install
+```
+
+If that doesn't work, try these steps:
+
+```bash
+# Remove package-lock.json and node_modules
+rm -rf node_modules
+rm package-lock.json
+
+# Clear npm cache again
+npm cache clean --force
+
+# Reinstall dependencies
+npm install
+```
