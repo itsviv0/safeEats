@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/safeats_blk.png",
         "backgroundColor": "#CCFF78"
-      }
+      },
+      "package": "com.itsviv0.safeEats"
     },
     "web": {
       "bundler": "metro",
